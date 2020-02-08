@@ -20,8 +20,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
 
                     <!-- Button trigger modal -->
-                    <form method="POST" th:action="@{'/admin/user/' + ${id} }">
-                        <input type="hidden" name="_method" value="DELETE">
+                    <form th:method="delete" th:action="@{'/admin/user/' + ${id} }">
                         <input type="hidden" name="_token" value="">
                         <input type="submit" value="Delete"  class="btn btn-danger" data-toggle="modal" th:data-target="'#modal_delete_' + ${id}">
                     </form>
